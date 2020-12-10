@@ -155,7 +155,8 @@ const styles = StyleSheet.create({
   },
   signOff: {
     textAlign: 'center',
-    marginHorizontal: 18,
+    marginHorizontal: 16,
+    marginBottom: 32,
   },
   dateLabel: {
     textAlign: 'center',
