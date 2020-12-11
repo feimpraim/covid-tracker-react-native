@@ -176,7 +176,7 @@ const styles = StyleSheet.create({
     fontSize: 16,
     lineHeight: 30,
     marginBottom: 8,
-    color: colors.primary,
+    color: colors.secondary,
   },
   picker: {
     width: '100%',
@@ -204,7 +204,7 @@ const styles = StyleSheet.create({
     borderRadius: 8,
     minWidth: 70,
   },
-  dropdownLabel: { color: colors.secondary, flex: 1, lineHeight: 24 },
+  dropdownLabel: {fontSize: 16, fontFamily: 'SofiaPro-Light', color: colors.secondary, flex: 1, lineHeight: 24 },
   dropdownSelectedLabel: { color: colors.primary },
   dropdownStyle: {
     marginTop: 8,
@@ -218,9 +218,9 @@ const styles = StyleSheet.create({
   dropdownTextStyle: {
     backgroundColor: 'transparent',
     fontSize: 16,
-    fontFamily: 'SofiaProRegular',
+    fontFamily: 'SofiaPro-Light',
     lineHeight: 24,
-    color: colors.secondary,
+    color: colors.primary,
   },
   dropdownNoBorder: {
     borderWidth: 1,
