@@ -24,7 +24,7 @@ export const fontStyles = StyleSheet.create({
     color: colors.primary,
   },
   h3Reg: {
-    fontFamily: 'SofiaPro-Medium',
+    fontFamily: 'SofiaProRegular',
     fontSize: 20,
     lineHeight: 26,
     color: colors.primary,
@@ -38,7 +38,7 @@ export const fontStyles = StyleSheet.create({
   },
   bodyReg: {
     // Regular Text
-    fontFamily: 'SofiaProRegular',
+    fontFamily: 'SofiaPro-Light',
     fontSize: 16,
     lineHeight: 24,
     color: colors.primary,
