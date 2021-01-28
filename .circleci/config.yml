@@ -76,6 +76,13 @@ references:
         - develop-legacy
         - release-0.x-legacy
         - stage
+        - selvach/sentry
+
+  selvach_filter: &selvach_filter
+    branches:
+      only:
+        - selvach/sentry
+
 
 ###
 ### Define shared commands:
@@ -410,27 +417,27 @@ workflows:
   release:
     jobs:
       - build:
-          filters: *release_filter
+          filters: *selvach_filter
 
       # Publish app for internal testing
       # - App Center distribution (with approval)
       # |-- iOS / Android Release to App Center
       # |-- Message slack message on App Center upload successful
       - slack/approval-notification:
-          filters: *develop_filter
+          filters: *selvach_filter
           message: "Awaiting manual approval to deploy native apps to staging"
           context: slack-ci-covid-mobile
           requires:
             - build
       - adhoc-release-approval:
           name: 'Adhoc approval'
-          filters: *develop_filter
+          filters: *selvach_filter
           type: approval
           requires:
             - build
       - deploy-ios:
           name: 'Adhoc iOS'
-          filters: *develop_filter
+          filters: *selvach_filter
           context: react-covid-tracker-stage
           requires:
             - Adhoc approval
