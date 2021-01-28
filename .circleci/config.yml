@@ -437,13 +437,13 @@ workflows:
             - build
       - deploy-ios:
           name: 'Adhoc iOS'
-          filters: *selvach_filter
+          filters: *develop_filter
           context: react-covid-tracker-stage
           requires:
             - Adhoc approval
       - deploy-android:
           name: 'Adhoc Android'
-          filters: *develop_filter
+          filters: *selvach_filter
           context: react-covid-tracker-stage
           requires:
             - Adhoc approval
